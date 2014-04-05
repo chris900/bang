@@ -1,0 +1,29 @@
+#package 'strings'
+
+
+func getUrl u {
+	out("getting: "+u);
+	return getFile(u);
+}
+
+
+url = "http://google.com"
+
+threads = [];
+
+for (i = 0; i < 10; i++) {
+	t = makeThread('getUrl', url);
+	runThread(t);
+	threads[i] = t;
+}
+
+pages = []
+
+for (threads : t) {
+	page = joinThread(t);
+	pages[t] = page
+}
+
+for (pages : p) {
+	out( substr(p, 0, 200) + "\n")
+}

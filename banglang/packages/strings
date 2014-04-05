@@ -1,0 +1,60 @@
+
+func out o {
+  echo(o+"\n")
+}
+					
+func strlen str {
+  for (str : k : v) {
+  }
+  return k + 1;
+}
+
+func strpos str find {
+  flen = strlen(find)
+  prev = '';
+  for str : k : v {
+    prev = prev + v;
+    if (strlen(prev) > flen) {
+      tprev = '';
+      for prev : pk : pv {
+        if (pk > 0) {
+          tprev = tprev + pv
+        }
+      }
+      prev = tprev
+    }
+    if (prev == find) {
+      r = k - flen;
+      return r + 1;
+    }
+  }
+
+  return false;
+}
+
+
+substr str s l {
+  newstr = ''
+  if (str) {
+	  slen = strlen(str)
+	  if (l) {
+		if (l < 0) {
+		  l = slen + l
+		  l = l - s
+		}
+	  }
+	  else {
+		l = slen
+	  }
+	  got = 0
+	  for str : k : v {
+		if (k > s - 1) {
+		  if (got < l) {
+			newstr = newstr + v
+			got++
+		  }
+		}
+	  }
+  }
+  return newstr;
+}

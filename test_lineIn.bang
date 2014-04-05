@@ -1,0 +1,6 @@
+#package 'strings'
+
+line = lineIn("say\t some\nthing: ")
+
+echo("\n" + line + "\n");
+

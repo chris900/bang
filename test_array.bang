@@ -1,0 +1,18 @@
+#package 'strings'
+
+function printArray arr {
+  for arr : k : v {
+    out(k + ': ' + v)
+  }
+}
+
+
+arr = []
+
+for i=0,j=9; i<10; i++,j++ {
+  arr[i] = j
+}
+
+printArray(arr);
+
+out(strlen("hello"))
